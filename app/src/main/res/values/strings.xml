@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Bontown</string>
+    <string name="email_entry">Enter your email address</string>
+    <string name="button_send">Continue</string>
 </resources>
