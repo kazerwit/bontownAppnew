@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import static com.bontown.R.id.editText2;
-
 
 public class DisplayMessageActivity extends AppCompatActivity {
 

@@ -7,15 +7,6 @@
     android:layout_height="match_parent"
     tools:context="com.bontown.MainActivity">
 
-    <RelativeLayout
-    <android.support.v7.widget.RecyclerView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/recyclerview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-    </android.support.constraint.ConstraintLayout>
-
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="319dp"
@@ -57,16 +48,6 @@
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginEnd="16dp" />
 
-
-    <GridLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
-
-
-    </GridLayout>
-
     <Button
         android:id="@+id/button3"
         android:layout_width="125dp"
@@ -78,8 +59,7 @@
         android:layout_marginLeft="32dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editText"
-        android:layout_marginTop="25dp"
-        android:onClick="getNewReleases"/>
+        android:layout_marginTop="25dp"/>
 
     <Button
         android:id="@+id/button4"
@@ -92,7 +72,6 @@
         tools:layout_editor_absoluteY="185dp"
         android:layout_marginTop="25dp"
         android:onClick="BasicToast"/>
-
 
     <Button
         android:id="@+id/button5"
