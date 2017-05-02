@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">Bontown</string>
+    <string name="app_welcome">App design by Bonnie Peterson. Find artists by genre and get recommendations based on your music tastes.</string>
     <string name="email_entry">Enter your email address</string>
     <string name="button_send">Continue</string>
+    <string name="title_activity_recycler">RecyclerActivity</string>
+    <string name="title_activity_recycler_view_adapter">RecyclerViewAdapter</string>
+    <string name="title_activity_recycler_view">RecyclerView</string>
 </resources>
