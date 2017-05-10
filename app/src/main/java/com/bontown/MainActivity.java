@@ -20,7 +20,6 @@ import static com.bontown.R.string.action_about;
 import static com.bontown.R.string.mail_dialog;
 
 
-
 public class MainActivity extends AppCompatActivity {
         public static final String EXTRA_MESSAGE = "com.bontown.MESSAGE";
         private static final String TAG = "MainActivity";
@@ -85,8 +84,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 return true;
 
-            case R.id.action_settings:
-                // User chose the "Settings" item, show the app settings UI...
+            case R.id.action_new_releases:
+                Intent intent1 = new Intent(this, DisplayNewReleases.class);
+                intent1.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent1);
                 return true;
 
             default:
@@ -118,5 +119,51 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "BasicToast(View view)");
 
         toast.show();
+    }
+
+    /** Called when the user taps the "New Releases button */
+    public void getNewReleases(View view) {
+        try {
+            Intent intent = new Intent(this, DisplayNewReleases.class);
+            startActivity(intent);
+        } catch (Exception e) {
+            Log.d(TAG, "getNewReleases()", e);
+        }
+
+    }
+
+    /** Called when the activity is about to become visible. */
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d(TAG, "onStart()");
+    }
+
+    /** Called when the activity has become visible. */
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(TAG, "onResume()");
+    }
+
+    /** Called when another activity is taking focus. */
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(TAG, "onPause()");
+    }
+
+    /** Called when the activity is no longer visible. */
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(TAG, "onStop()");
+    }
+
+    /** Called just before the activity is destroyed. */
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG, "onDestroy()");
     }
 }

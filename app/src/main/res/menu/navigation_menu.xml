@@ -3,14 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/action_home"
+        android:title="@string/action_home"
+        app:showAsAction="never|collapseActionView"
+        android:actionProviderClass="android.app.MediaRouteActionProvider"/>
+
+    <item
         android:id="@+id/action_about"
         android:title="@string/action_about"
         app:showAsAction="never|collapseActionView"
         android:actionProviderClass="android.app.MediaRouteActionProvider"/>
 
-    <!-- Settings, should always be in the overflow -->
-    <item android:id="@+id/action_settings"
-        android:title="@string/action_settings"
+    <item
+        android:id="@+id/action_new_releases"
+        android:title="@string/action_new_releases"
         app:showAsAction="never|collapseActionView"
         android:actionProviderClass="android.app.MediaRouteActionProvider"/>
+
     </menu>
