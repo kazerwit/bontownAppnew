@@ -18,6 +18,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 import static com.bontown.R.string.action_about;
 import static com.bontown.R.string.mail_dialog;
+//add comment for test
 
 
 public class MainActivity extends AppCompatActivity {
