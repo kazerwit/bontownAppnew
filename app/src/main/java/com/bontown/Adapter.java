@@ -42,7 +42,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     public Adapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater=LayoutInflater.from(context);
         View row=inflater.inflate(R.layout.custom_row,parent,false);
-        viewHolder1 = new ViewHolder(view1);
+        viewHolder1 = new ViewHolder(row);
         return viewHolder1;
     }
 

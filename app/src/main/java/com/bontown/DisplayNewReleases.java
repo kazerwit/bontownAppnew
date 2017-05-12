@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -16,20 +17,24 @@ import android.support.v7.widget.RecyclerView.ViewHolder;
 import android.support.v7.widget.RecyclerView.LayoutManager;
 import android.view.Window;
 import android.widget.RelativeLayout;
+import com.bontown.Adapter;
 
 
 public class DisplayNewReleases extends AppCompatActivity {
-    Context context;
-    RecyclerView recyclerView;
-    RelativeLayout relativeLayout;
-    RecyclerView.Adapter recyclerViewAdapter;
-    RecyclerView.LayoutManager recylerViewLayoutManager;
+      Context context;
+      RecyclerView recyclerView;
+      RelativeLayout relativeLayout;
+      RecyclerView.Adapter recyclerViewAdapter;
+      RecyclerView.LayoutManager recylerViewLayoutManager;
+    private static final String TAG = "DisplayNewReleases";
 
-    String[] leftColumn = {"Run The Jewels", "The XX", "Foxygen",
-            "Depeche Mode", "Aimee Mann", "Wire", "Danzig", "H09909"};
+    String[] leftColumn = {"ARTIST", "Run The Jewels", "The XX", "Foxygen",
+            "Depeche Mode", "Aimee Mann", "Wire", "Danzig", "H09909", "Brian Eno",
+            "The Flaming Lips", "Cherry Glazerr", "Ty Segall", "Clap Your Hands Say Yeah"};
 
-    String[] rightColumn = {"RTJ3", "I See You", "Hang", "Spirit", "Mental Illness",
-            "Silver/Lead", "Black Laden Crown", "United States of Horror"};
+    String[] rightColumn = {"ALBUM", "RTJ3", "I See You", "Hang", "Spirit", "Mental Illness",
+            "Silver/Lead", "Black Laden Crown", "United States of Horror", "Reflection",
+            "Oczy Mlody", "Apocalipstick", "Ty Segall", "The Tourist"};
 
 
     @Override
@@ -38,7 +43,6 @@ public class DisplayNewReleases extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_ACTION_BAR);
         setContentView(R.layout.activity_display_new_releases);
         context = getApplicationContext();
-        relativeLayout = (RelativeLayout) findViewById(R.id.relativelayout1);
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview1);
         recylerViewLayoutManager = new LinearLayoutManager(context);
         recyclerView.setLayoutManager(recylerViewLayoutManager);
@@ -49,13 +53,14 @@ public class DisplayNewReleases extends AppCompatActivity {
         myToolbar.setTitle("Navigation");
         setSupportActionBar(myToolbar);
         // Get a support ActionBar corresponding to this toolbar
-        ActionBar ab = getSupportActionBar();
-        // Enable the Up button and home button
-        ab.setDisplayHomeAsUpEnabled(true);
-        ab.setHomeButtonEnabled(true);
+          ActionBar ab = getSupportActionBar();
+          // Enable the Up button and home button
+          ab.setDisplayHomeAsUpEnabled(true);
+          ab.setHomeButtonEnabled(true);
+
+        Log.d(TAG, "onCreate(Bundle savedInstanceState)");
 
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
