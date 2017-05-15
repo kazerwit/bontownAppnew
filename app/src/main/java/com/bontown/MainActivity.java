@@ -15,10 +15,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.view.WindowManager;
+import android.widget.BaseAdapter;
 import android.widget.Toast;
 import static com.bontown.R.string.action_about;
 import static com.bontown.R.string.mail_dialog;
-//add comment for test
 
 
 public class MainActivity extends AppCompatActivity {

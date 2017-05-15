@@ -1,4 +1,4 @@
-package com.bontown;
+/**package com.bontown;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -60,3 +60,4 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
 
 }
+ **/
