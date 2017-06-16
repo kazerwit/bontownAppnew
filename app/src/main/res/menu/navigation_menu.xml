@@ -20,4 +20,10 @@
         app:showAsAction="never|collapseActionView"
         android:actionProviderClass="android.app.MediaRouteActionProvider"/>
 
+    <item
+        android:id="@+id/action_map_activity"
+        android:title="@string/action_map_activity"
+        app:showAsAction="never|collapseActionView"
+        android:actionProviderClass="android.app.MediaRouteActionProvider"/>
+
     </menu>

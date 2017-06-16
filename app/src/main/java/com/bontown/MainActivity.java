@@ -13,13 +13,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-import android.view.WindowManager;
-import android.widget.BaseAdapter;
 import android.widget.Toast;
-import static com.bontown.R.string.action_about;
-import static com.bontown.R.string.mail_dialog;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -90,6 +85,12 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent1 = new Intent(this, DisplayNewReleases.class);
                 intent1.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent1);
+                return true;
+
+            case R.id.action_map_activity:
+                Intent intent2 = new Intent(this, MapActivity.class);
+                intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent2);
                 return true;
 
             default:
