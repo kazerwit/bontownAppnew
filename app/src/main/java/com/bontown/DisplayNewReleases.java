@@ -2,6 +2,8 @@ package com.bontown;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -17,6 +19,7 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -64,6 +67,16 @@ public class DisplayNewReleases extends AppCompatActivity {
         // Enable the Up button and home button
         ab.setDisplayHomeAsUpEnabled(true);
         ab.setHomeButtonEnabled(true);
+
+        ConnectivityManager cManager = (ConnectivityManager) getSystemService(this.CONNECTIVITY_SERVICE);
+        NetworkInfo nInfo = cManager.getActiveNetworkInfo();
+
+        //Check for network connectivity and display toast to user
+        if(nInfo != null && nInfo.isConnected()) {
+            Toast.makeText(this, "Network is available", Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(this, "Network is not available. Page cannot be loaded", Toast.LENGTH_LONG).show();
+        }
 
         RequestQueue queue = Volley.newRequestQueue(this);
         String url = "http://bpeterson.icoolshow.net/course/ad340/testjsonfile.json";
